@@ -8,8 +8,8 @@ const Index = () => {
   const projects = [
     {
       title: "Quantum Machine Learning for Exoplanet Characterization",
-      description: "GSoC'25 project developing a quantum-classical hybrid pipeline for analyzing exoplanet atmospheres using Pennylane, TensorFlow, and PyTorch. Achieved R² = 0.82 benchmarking hybrid models against classical baselines.",
-      techStack: ["Python", "Pennylane", "TensorFlow", "PyTorch", "Quantum ML"],
+      description: "GSoC'25 project designing a quantum ML pipeline for characterizing exoplanet atmospheres using simulated transmission spectra. Implemented dimensionality reduction via Autoencoder and Quantum Amplitude encoding, applied K-Means clustering for quantum vs. classical feature comparison, and developed a quantum-classical hybrid model achieving R² of 0.82 vs. 0.85 classical baseline.",
+      techStack: ["Python", "Pennylane", "TensorFlow", "PyTorch", "Quantum ML", "K-Means"],
       links: {
         github: "https://github.com/sourishphate/QML_For_Exoplanet_Characterization_EXXA_GSoC_2025",
         demo: "https://summerofcode.withgoogle.com/programs/2025/projects/xIJEvndL",
@@ -17,25 +17,25 @@ const Index = () => {
       }
     },
     {
-      title: "Lip Reading",
-      description: "Built a 3D CNN + LSTM model to interpret speech from lip movements using deep learning and computer vision techniques.",
-      techStack: ["Python", "TensorFlow", "OpenCV", "Deep Learning"],
+      title: "Lip Reading System",
+      description: "Developed a deep learning model combining 3D CNN and LSTM to interpret spoken words from lip movements. Utilized Haar cascade classifier for face extraction and OpenCV for precise lip region extraction from video frames. Achieved 72% accuracy through extensive hyperparameter tuning and enabled real-time detection for live use.",
+      techStack: ["Python", "TensorFlow", "OpenCV", "CNN", "LSTM", "Computer Vision"],
       links: {
         github: "https://github.com/sourishphate/Project-X-Lip-Reading"
       }
     },
     {
-      title: "Captcha 2.0",
-      description: "Created an AI-driven CAPTCHA alternative that improves both accessibility and security using machine learning.",
-      techStack: ["Python", "JavaScript", "TensorFlow", "OpenCV"],
+      title: "Captcha 2.0 - AI-Driven Authentication",
+      description: "Developed an AI-driven CAPTCHA alternative enhancing security with smoother UX. Utilized browser fingerprinting with Random Forest Classifier for real-time human-bot screening, integrated OpenCV-based secondary verification for low-confidence scenarios, and optimized for seamless real-time detection while maintaining accessibility.",
+      techStack: ["Python", "JavaScript", "TensorFlow", "OpenCV", "Random Forest", "ML"],
       links: {
         github: "https://github.com/KrishShah3011/Captcha"
       }
     },
     {
-      title: "Voice2English (Multilingual Speech to Text)",
-      description: "Developed a multilingual voice-to-text translation pipeline under Project X, VJTI, leveraging NLP and ML technologies.",
-      techStack: ["Python", "ML", "NLP", "Speech Recognition"],
+      title: "Voice2English - Multilingual Speech Translation",
+      description: "Advanced voice-to-English translation system converting spoken input from any language into English text. Built end-to-end pipeline with ASR (BiLSTM + CTC + CNN) for transcription and Transformer-based NMT for translation. Leveraged Bhaashaanuvad dataset with 88K+ samples across Indian languages. Implemented dual architecture: CNN-BiLSTM-CTC + Transformer and pure Transformer-based approach for optimal performance.",
+      techStack: ["Python", "PyTorch", "Transformers", "LSTM", "CNN", "CTC", "NMT"],
       links: {
         github: "https://github.com/harsh-sankhe/Voice2English"
       }
@@ -222,17 +222,26 @@ const Index = () => {
                 <div>
                   <h3 className="text-2xl font-orbitron font-bold text-primary">Google Summer of Code 2025</h3>
                   <p className="text-foreground/80 font-medium">ML4SCI | Open Source Software Developer</p>
+                  <p className="text-sm text-primary/70 font-medium">Mumbai, Maharashtra | Jun 2025 – Oct 2025</p>
                 </div>
-                <span className="text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full border border-primary/30">2025</span>
+                <span className="text-primary font-semibold px-3 py-1 bg-primary/10 rounded-full border border-primary/30">Jun – Oct 2025</span>
               </div>
               <ul className="space-y-2 text-foreground/80">
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">▹</span>
-                  <span>Designed quantum ML pipeline for exoplanet analysis</span>
+                  <span>Designed a quantum machine learning based pipeline for characterizing exoplanet atmospheres using simulated transmission spectra and benchmarking with classical machine learning methods</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">▹</span>
-                  <span>Benchmarked hybrid models vs classical baselines achieving R² = 0.82</span>
+                  <span>Implemented dimensionality reduction of spectral data using Autoencoder and Quantum Amplitude encoding</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">▹</span>
+                  <span>Applied K-Means clustering and visualization to compare quantum vs. classical encoded feature representations of atmospheric gas concentrations</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-primary mt-1">▹</span>
+                  <span>Developed a quantum–classical hybrid model for predicting atmospheric gas concentrations, achieving an average R² of 0.82 compared to 0.85 for the classical baseline, highlighting the representational potential of quantum layers</span>
                 </li>
               </ul>
             </div>
@@ -249,6 +258,10 @@ const Index = () => {
                 <li className="flex items-start gap-2">
                   <span className="text-secondary mt-1">▹</span>
                   <span>Will contribute to backend systems and AI-driven analytics modules</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-secondary mt-1">▹</span>
+                  <span>Collaborate with cross-functional teams to design scalable financial technology solutions</span>
                 </li>
               </ul>
             </div>
@@ -303,10 +316,28 @@ const Index = () => {
               <div className="flex items-start gap-4">
                 <Target className="w-8 h-8 text-primary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-orbitron font-bold text-primary mb-2">Department Manager | Enthusia, VJTI</h3>
-                  <p className="text-foreground/80">
-                    Managed operations and execution of inter-college sports events, coordinating teams and ensuring seamless event delivery.
-                  </p>
+                  <div className="flex items-start justify-between mb-2 flex-wrap gap-2">
+                    <h3 className="text-xl font-orbitron font-bold text-primary">Department Manager | Enthusia, VJTI</h3>
+                    <span className="text-xs text-primary/70 font-medium">Sept 2023 – Feb 2025</span>
+                  </div>
+                  <ul className="space-y-2 text-foreground/80">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Responsible for organizing and overseeing sports committee operations, managing teams and executing inter-departmental and inter-college sports events as part of VJTI's annual sports fest</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Coordinated logistics for 500+ participants across multiple sporting events, ensuring seamless scheduling and resource allocation</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Led a team of 15+ volunteers, implementing efficient communication protocols and task delegation strategies</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary mt-1">▹</span>
+                      <span>Managed budget planning and vendor negotiations, optimizing event costs while maintaining quality standards</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -315,15 +346,30 @@ const Index = () => {
               <div className="flex items-start gap-4">
                 <Target className="w-8 h-8 text-secondary flex-shrink-0 mt-1" />
                 <div>
-                  <h3 className="text-xl font-orbitron font-bold text-secondary mb-2">Mentor & Execution Head | Project X, VJTI</h3>
+                  <div className="flex items-start justify-between mb-2 flex-wrap gap-2">
+                    <h3 className="text-xl font-orbitron font-bold text-secondary">Mentor & Execution Head | Project X, VJTI</h3>
+                    <span className="text-xs text-secondary/70 font-medium">Apr 2025 – Present</span>
+                  </div>
                   <ul className="space-y-2 text-foreground/80">
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">▹</span>
-                      <span>Mentored juniors in ML fundamentals and project workflows</span>
+                      <span>Actively mentoring 20+ junior students on machine learning fundamentals and guiding them through the development of a multilingual Speech to Text Translation project, covering model design, training, and deployment</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-secondary mt-1">▹</span>
-                      <span>Managed execution of multilingual Speech-to-Text project</span>
+                      <span>As Execution Head, managing overall committee operations, coordinating project timelines, delegating technical responsibilities, while ensuring smooth execution of all related activities and milestones</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">▹</span>
+                      <span>Conducted weekly technical workshops on deep learning architectures, ASR systems, and NMT models, enhancing team's practical ML skills</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">▹</span>
+                      <span>Established code review processes and version control workflows, improving collaboration efficiency by 40%</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary mt-1">▹</span>
+                      <span>Spearheaded integration of Transformer architectures and CTC decoding, driving innovation in the project's technical approach</span>
                     </li>
                   </ul>
                 </div>
