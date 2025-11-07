@@ -1,4 +1,4 @@
-import { Github, Linkedin, Award, Briefcase, Code2, Rocket, Users, Target } from 'lucide-react';
+import { Github, Linkedin, Award, Briefcase, Code2, Rocket, Users, Target, Download, Mail, Phone, GraduationCap } from 'lucide-react';
 import Starfield from '@/components/Starfield';
 import ProjectCard from '@/components/ProjectCard';
 import SkillBadge from '@/components/SkillBadge';
@@ -8,7 +8,12 @@ const Index = () => {
   const projects = [
     {
       title: "Quantum Machine Learning for Exoplanet Characterization",
-      description: "GSoC'25 project designing a quantum ML pipeline for characterizing exoplanet atmospheres using simulated transmission spectra. Implemented dimensionality reduction via Autoencoder and Quantum Amplitude encoding, applied K-Means clustering for quantum vs. classical feature comparison, and developed a quantum-classical hybrid model achieving R² of 0.82 vs. 0.85 classical baseline.",
+      description: [
+        "Designed a quantum ML pipeline for characterizing exoplanet atmospheres using simulated transmission spectra",
+        "Implemented dimensionality reduction via Autoencoder and Quantum Amplitude encoding",
+        "Applied K-Means clustering for quantum vs. classical feature comparison",
+        "Developed a quantum-classical hybrid model achieving R² of 0.82 vs. 0.85 classical baseline"
+      ],
       techStack: ["Python", "Pennylane", "TensorFlow", "PyTorch", "Quantum ML", "K-Means"],
       links: {
         github: "https://github.com/sourishphate/QML_For_Exoplanet_Characterization_EXXA_GSoC_2025",
@@ -18,7 +23,12 @@ const Index = () => {
     },
     {
       title: "Lip Reading System",
-      description: "Developed a deep learning model combining 3D CNN and LSTM to interpret spoken words from lip movements. Utilized Haar cascade classifier for face extraction and OpenCV for precise lip region extraction from video frames. Achieved 72% accuracy through extensive hyperparameter tuning and enabled real-time detection for live use.",
+      description: [
+        "Developed a deep learning model combining 3D CNN and LSTM to interpret spoken words from lip movements",
+        "Utilized Haar cascade classifier for face extraction and OpenCV for precise lip region extraction from video frames",
+        "Achieved 72% accuracy through extensive hyperparameter tuning",
+        "Enabled real-time detection for live use"
+      ],
       techStack: ["Python", "TensorFlow", "OpenCV", "CNN", "LSTM", "Computer Vision"],
       links: {
         github: "https://github.com/sourishphate/Project-X-Lip-Reading"
@@ -26,7 +36,12 @@ const Index = () => {
     },
     {
       title: "Captcha 2.0 - AI-Driven Authentication",
-      description: "Developed an AI-driven CAPTCHA alternative enhancing security with smoother UX. Utilized browser fingerprinting with Random Forest Classifier for real-time human-bot screening, integrated OpenCV-based secondary verification for low-confidence scenarios, and optimized for seamless real-time detection while maintaining accessibility.",
+      description: [
+        "Developed an AI-driven CAPTCHA alternative enhancing security with smoother UX",
+        "Utilized browser fingerprinting with Random Forest Classifier for real-time human-bot screening",
+        "Integrated OpenCV-based secondary verification for low-confidence scenarios",
+        "Optimized for seamless real-time detection while maintaining accessibility"
+      ],
       techStack: ["Python", "JavaScript", "TensorFlow", "OpenCV", "Random Forest", "ML"],
       links: {
         github: "https://github.com/KrishShah3011/Captcha"
@@ -34,7 +49,12 @@ const Index = () => {
     },
     {
       title: "Voice2English - Multilingual Speech Translation",
-      description: "Advanced voice-to-English translation system converting spoken input from any language into English text. Built end-to-end pipeline with ASR (BiLSTM + CTC + CNN) for transcription and Transformer-based NMT for translation. Leveraged Bhaashaanuvad dataset with 88K+ samples across Indian languages. Implemented dual architecture: CNN-BiLSTM-CTC + Transformer and pure Transformer-based approach for optimal performance.",
+      description: [
+        "Advanced voice-to-English translation system converting spoken input from any language into English text",
+        "Built end-to-end pipeline with ASR (BiLSTM + CTC + CNN) for transcription and Transformer-based NMT for translation",
+        "Leveraged Bhaashaanuvad dataset with 88K+ samples across Indian languages",
+        "Implemented dual architecture: CNN-BiLSTM-CTC + Transformer and pure Transformer-based approach"
+      ],
       techStack: ["Python", "PyTorch", "Transformers", "LSTM", "CNN", "CTC", "NMT"],
       links: {
         github: "https://github.com/harsh-sankhe/Voice2English"
@@ -89,7 +109,31 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col items-center gap-4 mb-6">
+            <div className="flex gap-4 text-foreground/80">
+              <a href="mailto:sourishphate@gmail.com" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Mail className="w-4 h-4" />
+                <span className="text-sm">sourishphate@gmail.com</span>
+              </a>
+              <span className="text-foreground/40">|</span>
+              <a href="tel:+919324530055" className="flex items-center gap-2 hover:text-primary transition-colors">
+                <Phone className="w-4 h-4" />
+                <span className="text-sm">+91 93245 30055</span>
+              </a>
+            </div>
+          </div>
+          
+          <div className="flex gap-4 justify-center flex-wrap">
+            <Button
+              size="lg"
+              className="bg-accent/20 border-2 border-accent text-accent hover:bg-accent hover:text-background glow-blue font-semibold"
+              asChild
+            >
+              <a href="/Sourish_Phate_Resume.pdf" download>
+                <Download className="w-5 h-5 mr-2" />
+                Download Resume
+              </a>
+            </Button>
             <Button
               size="lg"
               className="bg-primary/20 border-2 border-primary text-primary hover:bg-primary hover:text-background glow-teal font-semibold"
@@ -114,8 +158,48 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Education Section */}
+      <section className="py-12 px-4" id="education">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-3 mb-4">
+              <GraduationCap className="w-8 h-8 text-accent animate-pulse" />
+              <h2 className="text-4xl md:text-5xl font-orbitron font-bold text-accent">
+                EDUCATION
+              </h2>
+              <GraduationCap className="w-8 h-8 text-accent animate-pulse" />
+            </div>
+          </div>
+          
+          <div className="glass-panel p-8 rounded-2xl hover-glow border-l-4 border-accent">
+            <div className="flex items-start justify-between mb-3 flex-wrap gap-2">
+              <div>
+                <h3 className="text-2xl font-orbitron font-bold text-accent">Bachelor of Technology in Computer Engineering</h3>
+                <p className="text-foreground/80 font-medium">Veermata Jijabai Technological Institute (VJTI), Mumbai</p>
+                <p className="text-sm text-accent/70 font-medium">Minor in Entrepreneurship</p>
+              </div>
+              <span className="text-accent font-semibold px-3 py-1 bg-accent/10 rounded-full border border-accent/30">2023 – 2027</span>
+            </div>
+            <ul className="space-y-2 text-foreground/80">
+              <li className="flex items-start gap-2">
+                <span className="text-accent mt-1">▹</span>
+                <span>Third-year Computer Engineering student pursuing a comprehensive curriculum in AI, Machine Learning, and Software Systems</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent mt-1">▹</span>
+                <span>Specializing in Quantum Machine Learning and Deep Learning applications</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-accent mt-1">▹</span>
+                <span>Active member of technical committees including Project X and Enthusia</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
       {/* Projects Section */}
-      <section className="py-20 px-4" id="projects">
+      <section className="py-12 px-4" id="projects">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 mb-4">
@@ -139,7 +223,7 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section className="py-20 px-4" id="skills">
+      <section className="py-12 px-4" id="skills">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 mb-4">
@@ -204,7 +288,7 @@ const Index = () => {
       </section>
 
       {/* Experience Section */}
-      <section className="py-20 px-4" id="experience">
+      <section className="py-12 px-4" id="experience">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 mb-4">
@@ -270,7 +354,7 @@ const Index = () => {
       </section>
 
       {/* Achievements Section */}
-      <section className="py-20 px-4" id="achievements">
+      <section className="py-12 px-4" id="achievements">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 mb-4">
@@ -299,7 +383,7 @@ const Index = () => {
       </section>
 
       {/* Extracurricular Section */}
-      <section className="py-20 px-4" id="extracurricular">
+      <section className="py-12 px-4" id="extracurricular">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-3 mb-4">

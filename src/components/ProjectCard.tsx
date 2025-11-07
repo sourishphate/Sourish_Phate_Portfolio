@@ -3,7 +3,7 @@ import { Button } from './ui/button';
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description: string | string[];
   techStack: string[];
   links: {
     github?: string;
@@ -13,6 +13,7 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, description, techStack, links }: ProjectCardProps) => {
+  const descriptionArray = Array.isArray(description) ? description : [description];
   return (
     <div className="glass-panel p-6 rounded-xl hover-glow group relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -22,9 +23,14 @@ const ProjectCard = ({ title, description, techStack, links }: ProjectCardProps)
           {title}
         </h3>
         
-        <p className="text-foreground/80 mb-4 leading-relaxed">
-          {description}
-        </p>
+        <ul className="space-y-2 mb-4">
+          {descriptionArray.map((point, index) => (
+            <li key={index} className="flex items-start gap-2 text-foreground/80">
+              <span className="text-primary mt-1 flex-shrink-0">▹</span>
+              <span className="leading-relaxed">{point}</span>
+            </li>
+          ))}
+        </ul>
         
         <div className="flex flex-wrap gap-2 mb-4">
           {techStack.map((tech, index) => (
