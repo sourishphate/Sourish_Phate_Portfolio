@@ -180,20 +180,9 @@ const Index = () => {
               </div>
               <span className="text-accent font-semibold px-3 py-1 bg-accent/10 rounded-full border border-accent/30">2023 – 2027</span>
             </div>
-            <ul className="space-y-2 text-foreground/80">
-              <li className="flex items-start gap-2">
-                <span className="text-accent mt-1">▹</span>
-                <span>Third-year Computer Engineering student pursuing a comprehensive curriculum in AI, Machine Learning, and Software Systems</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent mt-1">▹</span>
-                <span>Specializing in Quantum Machine Learning and Deep Learning applications</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent mt-1">▹</span>
-                <span>Active member of technical committees including Project X and Enthusia</span>
-              </li>
-            </ul>
+            <p className="text-foreground/80 leading-relaxed">
+              I'm currently pursuing my undergraduate degree in Computer Engineering at Veermata Jijabai Technological Institute (VJTI), where I've developed a strong foundation in core subjects such as Data Structures and Algorithms, Operating Systems, Database Management Systems, and Computer Networks. Alongside my coursework, I've cultivated a deep interest in Artificial Intelligence, Machine Learning, and Quantum Computing. Through academic projects and independent research, I've explored the intersection of theoretical computer science and emerging technologies — from developing AI-driven applications to experimenting with quantum algorithms for complex real-world challenges.
+            </p>
           </div>
         </div>
       </section>
