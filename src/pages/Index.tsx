@@ -3,7 +3,6 @@ import Starfield from '@/components/Starfield';
 import ProjectCard from '@/components/ProjectCard';
 import SkillBadge from '@/components/SkillBadge';
 import { Button } from '@/components/ui/button';
-import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Index = () => {
   const projects = [
@@ -83,8 +82,8 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 py-20">
-        <div className="max-w-6xl mx-auto animate-fade-in">
-          <div className="text-center mb-8">
+        <div className="max-w-4xl mx-auto text-center animate-fade-in">
+          <div className="mb-8">
             <h1 className="text-5xl md:text-7xl font-orbitron font-black mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent animate-glow-pulse">
               SOURISH PHATE
             </h1>
@@ -96,34 +95,17 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="flex flex-col lg:flex-row gap-8 items-center lg:items-start">
-            {/* Profile Photo */}
-            <div className="flex-shrink-0 animate-slide-in">
-              <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary via-secondary to-accent rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
-                <img 
-                  src={profilePhoto} 
-                  alt="Sourish Phate" 
-                  className="relative w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl border-2 border-primary/50"
-                />
-              </div>
-            </div>
-            
-            {/* Introduction Content */}
-            <div className="flex-1 space-y-6 animate-slide-in">
-              <div className="glass-panel p-8 rounded-2xl">
-                <p className="text-foreground/90 leading-relaxed text-left">
-                  I'm Sourish Phate, a third-year Computer Engineering student at <strong className="text-primary">Veermata Jijabai Technological Institute (VJTI), Mumbai</strong>, pursuing a minor in Entrepreneurship. I'm passionate about AI, Quantum Machine Learning, and cutting-edge software systems that bridge science and innovation. As an upcoming Software Developer Intern at Citi and a Google Summer of Code 2025 developer with ML4SCI, I thrive at the intersection of research and real-world impact.
-                </p>
-                <p className="text-foreground/90 leading-relaxed text-left mt-4">
-                  During GSoC, I worked on a <strong className="text-secondary">quantum–classical hybrid pipeline for exoplanet atmosphere characterisation</strong>, integrating Pennylane, TensorFlow, and PyTorch. My work demonstrated the potential of quantum-enhanced learning for astrophysical data analysis — achieving near-classical accuracy while leveraging quantum encodings.
-                </p>
-                <div className="mt-6 p-4 bg-accent/10 border border-accent/30 rounded-lg">
-                  <p className="text-accent text-sm">
-                    💡 <strong>Fun fact:</strong> Google Summer of Code selects around 1,200 contributors globally out of tens of thousands of applicants each year — being part of it is a rare distinction in open-source innovation.
-                  </p>
-                </div>
-              </div>
+          <div className="glass-panel p-8 rounded-2xl max-w-3xl mx-auto mb-8 animate-slide-in">
+            <p className="text-foreground/90 leading-relaxed text-left">
+              I'm Sourish Phate, a third-year Computer Engineering student at <strong className="text-primary">Veermata Jijabai Technological Institute (VJTI), Mumbai</strong>, pursuing a minor in Entrepreneurship. I'm passionate about AI, Quantum Machine Learning, and cutting-edge software systems that bridge science and innovation. As an upcoming Software Developer Intern at Citi and a Google Summer of Code 2025 developer with ML4SCI, I thrive at the intersection of research and real-world impact.
+            </p>
+            <p className="text-foreground/90 leading-relaxed text-left mt-4">
+              During GSoC, I worked on a <strong className="text-secondary">quantum–classical hybrid pipeline for exoplanet atmosphere characterisation</strong>, integrating Pennylane, TensorFlow, and PyTorch. My work demonstrated the potential of quantum-enhanced learning for astrophysical data analysis — achieving near-classical accuracy while leveraging quantum encodings.
+            </p>
+            <div className="mt-6 p-4 bg-accent/10 border border-accent/30 rounded-lg">
+              <p className="text-accent text-sm">
+                💡 <strong>Fun fact:</strong> Google Summer of Code selects around 1,200 contributors globally out of tens of thousands of applicants each year — being part of it is a rare distinction in open-source innovation.
+              </p>
             </div>
           </div>
           
